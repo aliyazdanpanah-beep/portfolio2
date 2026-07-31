@@ -1,0 +1,93 @@
+{
+  "title": "API & Context Directory",
+  "description": "Next.js API routes and React Context for portfolio2 project",
+  "structure": {
+    "api": [
+      {
+        "file": "admin.ts",
+        "purpose": "Admin panel API endpoints",
+        "endpoints": [
+          {
+            "route": "/api/admin/*",
+            "methods": ["GET", "POST", "PUT", "DELETE"],
+            "description": "CRUD operations for admin content (projects, blogs, skills, contact)"
+          }
+        ]
+      },
+      {
+        "file": "auth.ts",
+        "purpose": "Authentication API",
+        "endpoints": [
+          {
+            "route": "/api/auth/*",
+            "methods": ["POST", "GET"],
+            "description": "Login, logout, JWT generation, session management"
+          }
+        ]
+      },
+      {
+        "file": "blog.ts",
+        "purpose": "Blog API",
+        "endpoints": [
+          {
+            "route": "/api/blog/*",
+            "methods": ["GET", "POST"],
+            "description": "Fetch all blog entries, create new blog posts"
+          }
+        ]
+      },
+      {
+        "file": "client.ts",
+        "purpose": "Base HTTP client",
+        "description": "Axios or fetch-based client for API calls with interceptors"
+      },
+      {
+        "file": "config.ts",
+        "purpose": "API configuration",
+        "description": "Base URL, timeout, headers, environment variables"
+      },
+      {
+        "file": "form.ts",
+        "purpose": "Form validation and submission",
+        "description": "Schema validation using Zod or similar library"
+      }
+    ],
+    "contexts": [
+      {
+        "file": "auth-context.tsx",
+        "purpose": "Authentication state management",
+        "features": [
+          "User authentication state",
+          "Login/logout functions",
+          "Protected route wrapper",
+          "JWT token management"
+        ]
+      }
+    ],
+    "providers": [
+      {
+        "file": "query-provider.tsx",
+        "purpose": "React Query data fetching and caching",
+        "features": [
+          "Server state management",
+          "Automatic caching",
+          "Background refetching",
+          "Stale-while-revalidate pattern"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "http_client": ["axios", "fetch", "or similar"],
+    "validation": ["zod", "zod-validation-error"],
+    "auth": ["jsonwebtoken", "bcryptjs", "cookie"],
+    "state_management": ["react-query", "zustand"]
+  },
+  "setup_required": [
+    "Install API dependencies",
+    "Create .env.local with API endpoints",
+    "Set up Next.js API routes structure",
+    "Configure authentication middleware"
+  ],
+  "notes": "This is a Next.js 14+ project with App Router. API routes should be created in app/api/* directories."
+}

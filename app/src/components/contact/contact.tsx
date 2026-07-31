@@ -1,4 +1,50 @@
+"use client";
+
+import axios from "axios";
+import { useState } from "react";
+
+interface IForms {
+  name: string;
+  email: string;
+  project: string;
+}
+
 const Contact = () => {
+  const [forms, setForms] = useState<IForms>({
+    name: "",
+    email: "",
+    project: ""
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setIsSuccess(false);
+    
+    try {
+      await axios.post("/api/form", forms);
+      setIsSuccess(true);
+      setForms({ name: "", email: "", project: "" });
+      
+      setTimeout(() => setIsSuccess(false), 3000);
+    } catch (error) {
+      console.error("Error sending form:", error);
+      alert("Masseg not send please do it later");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForms(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <section
       id="contact"
@@ -33,27 +79,55 @@ const Contact = () => {
       </p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-        <input className="contact-input" type="text" placeholder="Your name" />
-        <input
-          className="contact-input"
-          type="email"
-          placeholder="your@email.com"
-        />
-        <textarea
-          className="contact-input"
-          rows={5}
-          placeholder="Tell me about the project..."
-          style={{ resize: "vertical" }}
-        />
-        <button
-          className="glow-btn"
-          style={{ alignSelf: "flex-start" }}
-          onClick={() =>
-            (window.location.href = "mailto:ali.yazdanpanahfard@gmail.com")
-          }
-        >
-          Send Message
-        </button>
+        <form onSubmit={handleSubmit}>
+          <input
+            name="name"
+            value={forms.name}
+            onChange={handleChange}
+            className="contact-input"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+          <input
+            name="email"
+            value={forms.email}
+            onChange={handleChange}
+            className="contact-input"
+            type="email"
+            placeholder="your@email.com"
+            required
+          />
+          <textarea
+            name="project"
+            value={forms.project}
+            onChange={handleChange}
+            className="contact-input"
+            rows={5}
+            placeholder="Tell me about the project..."
+            style={{ resize: "vertical" }}
+            required
+          />
+          
+          {isSuccess && (
+            <p style={{ color: "#64FFDA", fontSize: 14, marginTop: 8 }}>
+              ✓ Message sent successfully!
+            </p>
+          )}
+          
+          <button
+            type="submit"
+            className="glow-btn"
+            style={{ 
+              alignSelf: "flex-start",
+              opacity: isLoading ? 0.7 : 1,
+              cursor: isLoading ? "not-allowed" : "pointer"
+            }}
+            disabled={isLoading}
+          >
+            {isLoading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
       </div>
 
       <div
