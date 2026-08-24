@@ -681,7 +681,7 @@ export default function Portfolio() {
             wordBreak: "break-word",
           }}
         >
-          Ali Yazdanpanahfard
+          Ali Yazdanpanah
         </h1>
 
         <div
