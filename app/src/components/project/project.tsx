@@ -41,6 +41,14 @@ const projects: Project[] = [
     accent: "#EC4899",
     demoUrl: "https://coruscating-gingersnap-18c856.netlify.app/store",
   },
+  {
+    title: "Advanced RAG System",
+    description:
+    "An advanced RAG system built to transform complex internal documents into a reliable, searchable knowledge base. It features a modular pipeline for document processing, OCR, ingestion, intelligent chunking, semantic retrieval, and LLM-based generation, with a strong focus on accuracy, scalability, and grounded responses.",
+    tags: ["Ingestion", "Chunking", "Embedding", "Vector DB", "RAG"],
+    accent: "#64FFDA",
+    demoUrl: ""
+  }
 ];
 
 const Project: FC = () => {
