@@ -8,7 +8,7 @@ const Contact = () => {
       }}
     >
       <p className="section-label" style={{ marginBottom: 12 }}>
-        04. Contact
+        06. Contact
       </p>
       <h2
         className="display-heading"

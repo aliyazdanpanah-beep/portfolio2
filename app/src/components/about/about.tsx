@@ -22,7 +22,7 @@ const About: FC = () => {
       }}
     >
       <p className="section-label" style={{ marginBottom: 12 }}>
-        01. About Me
+        02. About Me
       </p>
       <h2
         className="display-heading"

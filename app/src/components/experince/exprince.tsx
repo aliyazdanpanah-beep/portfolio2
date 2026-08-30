@@ -22,7 +22,7 @@ export default function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-title">
       <p className="section-label" style={{ marginBottom: 12 }}>
-        03. Experience
+        04. Experience
       </p>
       <h2 id="experience-title" className="display-heading">
         Where I&apos;ve worked

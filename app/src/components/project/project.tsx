@@ -63,7 +63,7 @@ const Project: FC = () => {
         className="section-label"
         style={{ marginBottom: "clamp(10px, 2vh, 12px)" }}
       >
-        03. Projects
+        05. Projects
       </p>
       <h2
         className="display-heading"

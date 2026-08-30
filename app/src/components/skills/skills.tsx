@@ -24,7 +24,7 @@ const SkillsSEC = () => {
   return (
     <section id="skills" style={{ padding: "100px max(24px, 10vw)" }}>
       <p className="section-label" style={{ marginBottom: 12 }}>
-        02. Skills
+        03. Skills
       </p>
       <h2
         className="display-heading"

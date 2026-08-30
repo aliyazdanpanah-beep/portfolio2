@@ -54,7 +54,7 @@ export default function Portfolio() {
   const role = useTypingEffect(ROLES);
   const heroRef = useRef<HTMLElement>(null);
 
-  const navLinks = ["home", "about", "skills", "projects", "contact"];
+  const navLinks = ["home", "about", "skills", "experience", "projects", "contact"];
 
   useEffect(() => {
     const handleScroll = () => {
