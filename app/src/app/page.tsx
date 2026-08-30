@@ -2,6 +2,7 @@
 
 import About from "@/components/about/about";
 import Contact from "@/components/contact/contact";
+import Experience from "@/components/experince/exprince";
 import Project from "@/components/project/project";
 import SkillsSEC from "@/components/skills/skills";
 import { useState, useEffect, useRef } from "react";
@@ -804,6 +805,11 @@ export default function Portfolio() {
 
       {/* ── SKILLS ── */}
       <SkillsSEC />
+
+      <div className="divider" style={{ margin: "0 max(24px, 10vw)" }} />
+
+      {/* ── EXPERIENCE ── */}
+      <Experience />
 
       <div className="divider" style={{ margin: "0 max(24px, 10vw)" }} />
 
