@@ -100,8 +100,7 @@ const Hero = () => {
           marginBottom: 44,
         }}
       >
-        Frontend developer with growing backend expertise — building scalable
-        full-stack applications with{" "}
+        Backend-focused full-stack developer specializing in system architecture, security, and AI-augmented engineering — building resilient, production-grade platforms with Next.js, FastAPI, and PostgreSQL {" "}
         <span style={{ color: "#64FFDA" }}>Next.js</span>,{" "}
         <span style={{ color: "#64FFDA" }}>FastAPI</span>, and{" "}
         <span style={{ color: "#64FFDA" }}>PostgreSQL</span>. Based in Bushehr,

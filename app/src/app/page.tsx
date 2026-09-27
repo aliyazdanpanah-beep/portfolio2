@@ -711,8 +711,7 @@ export default function Portfolio() {
             marginBottom: "clamp(32px, 6vh, 44px)",
           }}
         >
-          Frontend developer with growing backend expertise — building scalable
-          full-stack applications with{" "}
+          Backend-focused full-stack developer specializing in system architecture, security, and AI-augmented engineering — building resilient, production-grade platforms with{" "}
           <span style={{ color: "#64FFDA", fontWeight: 500 }}>Next.js</span>,{" "}
           <span style={{ color: "#64FFDA", fontWeight: 500 }}>FastAPI</span>,
           and{" "}

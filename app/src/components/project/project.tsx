@@ -10,12 +10,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Café Menu Platform",
+    title: "Multi-Tenant SaaS Digital Menu Platform",
     description:
-      "Full-stack café menu app with Next.js frontend (SEO-optimized, SSR) and a FastAPI backend. Features token-based auth, protected routes, and relational DB managed via SQLAlchemy and SQLite.",
-    tags: ["Next.js", "FastAPI", "SQLAlchemy", "Authentication", "SEO"],
+      "Feature-based, modular full-stack platform giving cafés and restaurants an isolated digital menu system per tenant. Built with multi-level RBAC (Platform Super Admin, Organization Admin, Member, Public User), strict tenant isolation, and a scalable feature-first architecture across both frontend and backend.",
+    tags: ["Next.js", "FastAPI", "SQLAlchemy", "Multi-Tenancy", "RBAC"],
     accent: "#64FFDA",
-    demoUrl: "https://github.com/aliyazdanpanah-beep/coffeeCode",
+    demoUrl: "",
   },
   {
     title: "Freelance Marketplace Redesign",
@@ -40,14 +40,6 @@ const projects: Project[] = [
     tags: ["React", "React Router", "CSS Modules", "Responsive Design"],
     accent: "#EC4899",
     demoUrl: "https://coruscating-gingersnap-18c856.netlify.app/store",
-  },
-  {
-    title: "Advanced RAG System",
-    description:
-    "An advanced RAG system built to transform complex internal documents into a reliable, searchable knowledge base. It features a modular pipeline for document processing, OCR, ingestion, intelligent chunking, semantic retrieval, and LLM-based generation, with a strong focus on accuracy, scalability, and grounded responses.",
-    tags: ["Ingestion", "Chunking", "Embedding", "Vector DB", "RAG"],
-    accent: "#64FFDA",
-    demoUrl: ""
   }
 ];
 

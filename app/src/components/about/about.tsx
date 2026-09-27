@@ -54,13 +54,15 @@ const About: FC = () => {
               fontSize: "clamp(14px, 3.5vw, 15px)",
             }}
           >
-            I&apos;m a full-stack developer who genuinely enjoys understanding{" "}
+            I&apos;m a backend-focused engineer who genuinely enjoys understanding{" "}
             <em style={{ color: "#CCD6F6", fontStyle: "italic" }}>
               how systems work
             </em>{" "}
-            — not just building features, but tracing through the architecture
-            behind them. My sweet spot is the intersection of polished
-            frontends and solid backend design.
+            — not just building features, but owning the architecture, security,
+            and decision-making behind them. I&apos;ve led end-to-end system design
+            from scratch (RAG pipelines, multi-tenant platforms, fault-tolerant
+            data engines), always with a strong focus on reliability and
+            secure-by-design principles.
           </p>
           <p
             style={{
@@ -72,14 +74,15 @@ const About: FC = () => {
           >
             I work with{" "}
             <span style={{ color: "#64FFDA", fontWeight: 500 }}>
-              Next.js, TypeScript, and Tailwind
-            </span>{" "}
-            on the frontend and{" "}
-            <span style={{ color: "#64FFDA", fontWeight: 500 }}>
               FastAPI, SQLAlchemy, and PostgreSQL
             </span>{" "}
-            on the backend. I care deeply about auth security, rendering
-            strategies (SSR/SSG/ISR), and state management.
+            on the backend, and{" "}
+            <span style={{ color: "#64FFDA", fontWeight: 500 }}>
+              Next.js and TypeScript
+            </span>{" "}
+            on the frontend — with growing expertise in orchestrating AI coding
+            agents under full technical ownership, rather than relying on them
+            for decision-making.
           </p>
           <p
             style={{
@@ -88,8 +91,8 @@ const About: FC = () => {
               fontSize: "clamp(14px, 3.5vw, 15px)",
             }}
           >
-            When I&apos;m not building, I&apos;m debugging — and I consider that
-            a feature, not a bug.
+            When I&apos;m not building, I&apos;m debugging — and I consider that a
+            feature, not a bug.
           </p>
         </div>
 

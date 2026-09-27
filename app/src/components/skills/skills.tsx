@@ -67,10 +67,10 @@ const SkillsSEC = () => {
         }}
       >
         {[
-          { label: "Frontend (React / Next.js)", pct: 92 },
-          { label: "Backend (FastAPI / Python)", pct: 78 },
-          { label: "Database (SQL / PostgreSQL)", pct: 70 },
-          { label: "Auth & API Security", pct: 82 },
+          { label: "Frontend (React / Next.js)", pct: 70 },
+          { label: "Backend (FastAPI / Python)", pct: 95 },
+          { label: "Database (SQL / PostgreSQL)", pct: 80 },
+          { label: "Auth & API Security", pct: 90 },
         ].map(({ label, pct }) => (
           <div key={label}>
             <div

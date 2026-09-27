@@ -7,13 +7,13 @@ const experiences = [
     date: "2026 - Present",
     position: "Backend Developer",
     company: "JAAVDAN",
-    companyUrl: "#",
+    companyUrl: "https://jaavdan.ir/",
     description: [
-      "Technical Lead in RAG System: Led the technical design and development of an end-to-end RAG pipeline for transforming complex and unstructured documents into reliable, searchable knowledge. The system includes document ingestion, PDF processing, Persian/English OCR, preprocessing, validation, intelligent chunking, and embedding generation, with automated quality checks and OCR accuracy evaluation to improve the reliability of downstream retrieval and generation.",
-      "Pricing Engine: A modular price aggregation and synchronization engine designed to collect, normalize, validate, and serve real-time market prices from multiple external sources. It supports different data sources and update frequencies, with a clean architecture, automated testing, fault-tolerant synchronization, and Docker-based deployment for reliable integration with downstream services.",
-      "Working with Python, FastAPI, Javascript, Typescript, Docker, Pytest PostgreSQL, SQLAlchemy, REST APIs, and automated testing.",
-      "Back-end development of Javadan website and cooperation in the deployment of websites",
-      "Working with Git, GitHub, Pull Requests, and collaborative code reviews.",
+      "Orchestrated AI coding agents as a scoped execution layer, retaining sole ownership of architecture, diagnosis, test strategy, and output validation across the full development lifecycle.",
+      "Served as sole technical lead, architecting and delivering an end-to-end RAG pipeline that transforms unstructured Persian/English documents into a searchable knowledge base — spanning ingestion, OCR, preprocessing, intelligent chunking, and embedding generation.",
+      "Designed automated quality-assurance mechanisms, including OCR accuracy evaluation and validation checks, to improve reliability of downstream retrieval and generation.",
+      "Architected and delivered a fault-tolerant, production-grade price enrichment engine — spanning resilient multi-source ingestion, fallback strategies, data validation, stale-value protection, and scheduled processing — powering reliable, normalized market and commodity pricing across the Iranoban platform.",
+      "Architected and delivered a security-critical, multi-tenant organizational calendar platform — enforcing strict data isolation, role-based access control, scoped rate limiting, persistent IP blocking, and comprehensive security validation — ensuring secure separation of data and operations across organizations at scale."
     ],
   },
 ];
