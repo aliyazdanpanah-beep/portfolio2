@@ -770,7 +770,7 @@ export default function Portfolio() {
     boxShadow: "0 0 15px rgba(100,255,218,0.3)",
   }}
   onClick={() => {
-    const cvUrl = "/resume/Ali_Yazdanpanahfard_CV.pdf";
+    const cvUrl = "/Ali_Yazdanpanahfard_CV.pdf";
     const link = document.createElement("a");
     link.href = cvUrl;
     link.download = "Ali_Yazdanpanahfard_CV.pdf";
