@@ -14,7 +14,7 @@ const projects: Project[] = [
     description:
       "Feature-based, modular full-stack platform giving cafés and restaurants an isolated digital menu system per tenant. Built with multi-level RBAC (Platform Super Admin, Organization Admin, Member, Public User), strict tenant isolation, and a scalable feature-first architecture across both frontend and backend.",
     tags: ["Next.js", "FastAPI", "SQLAlchemy", "Multi-Tenancy", "RBAC"],
-    accent: "#64FFDA",
+    accent: "var(--color-accent)",
     demoUrl: "",
   },
   {
@@ -22,7 +22,7 @@ const projects: Project[] = [
     description:
       "Redesigned 13+ pages of a freelance marketplace platform. Worked closely with the product manager to improve UI consistency, user flow, and overall engagement.",
     tags: ["Next.js", "TypeScript", "Bootstrap", "UI/UX"],
-    accent: "#8B5CF6",
+    accent: "var(--color-accent)",
     demoUrl: "https://lancerify.com/",
   },
   {
@@ -30,7 +30,7 @@ const projects: Project[] = [
     description:
       "Secure login/registration system with client-side session management, protected routes, and a Python backend. Built with React Query for server-state sync.",
     tags: ["Next.js", "TypeScript", "FastAPI", "React Query", "Context API"],
-    accent: "#F59E0B",
+    accent: "var(--color-accent)",
     demoUrl: "https://github.com/aliyazdanpanah-beep/Blog",
   },
   {
@@ -38,10 +38,17 @@ const projects: Project[] = [
     description:
       "Responsive shop interface featuring product filtering, cart simulation, and clean component architecture using React Router and CSS Modules.",
     tags: ["React", "React Router", "CSS Modules", "Responsive Design"],
-    accent: "#EC4899",
+    accent: "var(--color-accent)",
     demoUrl: "https://coruscating-gingersnap-18c856.netlify.app/store",
   }
 ];
+
+// Helper: convert CSS accent token to rgba string for hover glow
+const accentToRgba = (accent: string) => {
+  if (accent === "var(--color-accent)") return "224, 122, 95";
+  if (accent === "var(--color-accent-dim)") return "129, 178, 154";
+  return "224, 122, 95";
+};
 
 const Project: FC = () => {
   return (
@@ -61,7 +68,7 @@ const Project: FC = () => {
         className="display-heading"
         style={{
           fontSize: "clamp(28px, 4vw, 40px)",
-          color: "#CCD6F6",
+          color: "var(--color-text)",
           marginBottom: "clamp(12px, 2vh, 16px)",
         }}
       >
@@ -69,7 +76,7 @@ const Project: FC = () => {
       </h2>
       <p
         style={{
-          color: "#8892B0",
+          color: "var(--color-text-dim)",
           fontSize: "clamp(13px, 3.5vw, 15px)",
           marginBottom: "clamp(32px, 6vh, 48px)",
           maxWidth: "min(480px, 90vw)",
@@ -94,10 +101,9 @@ const Project: FC = () => {
             key={p.title}
             className="project-card"
             style={{
-              background: "#0D1526",
-              border: "1px solid #1E2A45",
+              background: "var(--color-surface)",
+              border: "1px solid var(--color-border)",
               padding: "clamp(20px, 4vw, 28px)",
-              transition: "border-color 0.3s ease, transform 0.3s ease",
               cursor: "default",
               display: "flex",
               flexDirection: "column",
@@ -108,7 +114,7 @@ const Project: FC = () => {
               e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#1E2A45";
+              e.currentTarget.style.borderColor = "var(--color-border)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -150,24 +156,16 @@ const Project: FC = () => {
                   gap: "6px",
                   padding: "4px 8px",
                   borderRadius: "4px",
-                  background: "rgba(100,255,218,0)",
+                  background: "rgba(0, 0, 0, 0)",
                   transition: "all 0.2s ease",
                   cursor: "pointer",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = `rgba(${
-                    p.accent === "#64FFDA"
-                      ? "100,255,218"
-                      : p.accent === "#8B5CF6"
-                      ? "139,92,246"
-                      : p.accent === "#F59E0B"
-                      ? "245,158,11"
-                      : "236,72,153"
-                  }, 0.1)`;
+                  e.currentTarget.style.background = `rgba(${accentToRgba(p.accent)}, 0.1)`;
                   e.currentTarget.style.transform = "translateX(2px)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(100,255,218,0)";
+                  e.currentTarget.style.background = "rgba(0, 0, 0, 0)";
                   e.currentTarget.style.transform = "translateX(0)";
                 }}
               >
@@ -179,7 +177,7 @@ const Project: FC = () => {
             <h3
               className="display-heading"
               style={{
-                color: "#CCD6F6",
+                color: "var(--color-text)",
                 fontSize: "clamp(18px, 4vw, 20px)",
                 marginBottom: "clamp(10px, 2vh, 12px)",
                 lineHeight: 1.3,
@@ -190,7 +188,7 @@ const Project: FC = () => {
 
             <p
               style={{
-                color: "#8892B0",
+                color: "var(--color-text-dim)",
                 fontSize: "clamp(13px, 3vw, 14px)",
                 lineHeight: "clamp(1.6, 1.7, 1.75)",
                 marginBottom: "clamp(16px, 3vh, 20px)",

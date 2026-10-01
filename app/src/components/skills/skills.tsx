@@ -30,7 +30,7 @@ const SkillsSEC = () => {
         className="display-heading"
         style={{
           fontSize: "clamp(28px, 4vw, 40px)",
-          color: "#CCD6F6",
+          color: "var(--color-text)",
           marginBottom: 16,
         }}
       >
@@ -38,7 +38,7 @@ const SkillsSEC = () => {
       </h2>
       <p
         style={{
-          color: "#8892B0",
+          color: "var(--color-text-dim)",
           fontSize: 15,
           marginBottom: 48,
           maxWidth: 480,
@@ -51,7 +51,7 @@ const SkillsSEC = () => {
       <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
         {skills.map((skill) => (
           <div key={skill.name} className="skill-pill">
-            <span style={{ color: "#64FFDA", marginRight: 6 }}>▸</span>
+            <span style={{ color: "var(--color-accent)", marginRight: 6 }}>▸</span>
             {skill.name}
           </div>
         ))}
@@ -80,16 +80,16 @@ const SkillsSEC = () => {
                 marginBottom: 8,
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: 12,
-                color: "#8892B0",
+                color: "var(--color-text-dim)",
               }}
             >
               <span>{label}</span>
-              <span style={{ color: "#64FFDA" }}>{pct}%</span>
+              <span style={{ color: "var(--color-accent)" }}>{pct}%</span>
             </div>
             <div
               style={{
                 height: 4,
-                background: "#1E2A45",
+                background: "var(--color-border)",
                 borderRadius: 2,
                 overflow: "hidden",
               }}
@@ -98,7 +98,7 @@ const SkillsSEC = () => {
                 style={{
                   height: "100%",
                   width: `${pct}%`,
-                  background: "linear-gradient(90deg, #64FFDA, #8B5CF6)",
+                  background: "linear-gradient(90deg, var(--color-accent), var(--color-accent-dim))",
                   borderRadius: 2,
                 }}
               />

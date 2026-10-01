@@ -1,14 +1,14 @@
 /* Experience Section — vertical timeline layout (like reference screenshots)
-   Site palette: bg #0A0F1E | border #1E2A45 | accent #64FFDA
-   headings #CCD6F6 | body #8892B0 */
+   Palette from docs/patterns.md, mapped to global CSS variables */
 
 #experience {
   padding: clamp(60px, 10vh, 100px) max(24px, 10vw);
+  background: var(--color-bg);
 }
 
 #experience-title {
   font-size: clamp(28px, 4vw, 40px);
-  color: #ccd6f6;
+  color: var(--color-text);
   margin-bottom: clamp(32px, 6vh, 48px);
 }
 
@@ -31,7 +31,7 @@
   top: 8px;
   bottom: 8px;
   width: 1px;
-  background: #1e2a45;
+  background: var(--color-border);
 }
 
 .experience-item {
@@ -46,8 +46,8 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #64ffda;
-  box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.15);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.15);
 }
 
 /* Date pill */
@@ -55,27 +55,27 @@
   display: inline-block;
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(10px, 2.5vw, 12px);
-  color: #64ffda;
-  background: rgba(100, 255, 218, 0.08);
-  border: 1px solid rgba(100, 255, 218, 0.25);
+  color: var(--color-accent);
+  background: rgba(224, 122, 95, 0.08);
+  border: 1px solid rgba(224, 122, 95, 0.25);
   border-radius: 999px;
   padding: 3px 12px;
   margin-bottom: 12px;
   letter-spacing: 0.05em;
 }
 
-/* Position at Company, */
+/* Position at Company */
 .experience-item h3 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: clamp(17px, 4vw, 20px);
-  color: #ccd6f6;
+  color: var(--color-text);
   line-height: 1.35;
   margin-bottom: clamp(10px, 2vh, 14px);
 }
 
 .experience-item h3 a {
-  color: #64ffda;
+  color: var(--color-accent);
   text-decoration: none;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
@@ -101,7 +101,7 @@
   align-items: flex-start;
   gap: 10px;
   font-size: clamp(13px, 3vw, 14px);
-  color: #8892b0;
+  color: var(--color-text-dim);
   line-height: 1.7;
   transition: color 0.2s ease;
 }
@@ -111,14 +111,14 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #64ffda;
+  background: var(--color-accent);
   opacity: 0.7;
   margin-top: 0.55em;
   flex-shrink: 0;
 }
 
 .experience-item ul li:hover {
-  color: #ccd6f6;
+  color: var(--color-text);
 }
 
 .experience-item ul li:hover::before {

@@ -8,13 +8,13 @@ const Contact = () => {
       }}
     >
       <p className="section-label" style={{ marginBottom: 12 }}>
-        06. Contact
+        07. Contact
       </p>
       <h2
         className="display-heading"
         style={{
           fontSize: "clamp(28px, 4vw, 40px)",
-          color: "#CCD6F6",
+          color: "var(--color-text)",
           marginBottom: 16,
         }}
       >
@@ -22,7 +22,7 @@ const Contact = () => {
       </h2>
       <p
         style={{
-          color: "#8892B0",
+          color: "var(--color-text-dim)",
           fontSize: 15,
           lineHeight: 1.75,
           marginBottom: 44,
@@ -67,12 +67,12 @@ const Contact = () => {
       >
         <a
           href="mailto:ali.yazdanpanahfard@gmail.com"
-          style={{ color: "#8892B0", textDecoration: "none" }}
+          style={{ color: "var(--color-text-dim)", textDecoration: "none" }}
           onMouseOver={(e) =>
-            ((e.target as HTMLElement).style.color = "#64FFDA")
+            ((e.target as HTMLElement).style.color = "var(--color-accent)")
           }
           onMouseOut={(e) =>
-            ((e.target as HTMLElement).style.color = "#8892B0")
+            ((e.target as HTMLElement).style.color = "var(--color-text-dim)")
           }
         >
           ✉ Email
@@ -81,12 +81,12 @@ const Contact = () => {
           href="https://github.com/aliyazdanpanah-beep"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "#8892B0", textDecoration: "none" }}
+          style={{ color: "var(--color-text-dim)", textDecoration: "none" }}
           onMouseOver={(e) =>
-            ((e.target as HTMLElement).style.color = "#64FFDA")
+            ((e.target as HTMLElement).style.color = "var(--color-accent)")
           }
           onMouseOut={(e) =>
-            ((e.target as HTMLElement).style.color = "#8892B0")
+            ((e.target as HTMLElement).style.color = "var(--color-text-dim)")
           }
         >
           ⌥ GitHub
@@ -95,12 +95,12 @@ const Contact = () => {
           href="https://linkedin.com/in/ali-yazdanpanah-79787a2a3"
           target="_blank"
           rel="noreferrer"
-          style={{ color: "#8892B0", textDecoration: "none" }}
+          style={{ color: "var(--color-text-dim)", textDecoration: "none" }}
           onMouseOver={(e) =>
-            ((e.target as HTMLElement).style.color = "#64FFDA")
+            ((e.target as HTMLElement).style.color = "var(--color-accent)")
           }
           onMouseOut={(e) =>
-            ((e.target as HTMLElement).style.color = "#8892B0")
+            ((e.target as HTMLElement).style.color = "var(--color-text-dim)")
           }
         >
           ⬡ LinkedIn

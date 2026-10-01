@@ -28,7 +28,7 @@ const About: FC = () => {
         className="display-heading"
         style={{
           fontSize: "clamp(28px, 4vw, 40px)",
-          color: "#CCD6F6",
+          color: "var(--color-text)",
           marginBottom: "clamp(32px, 5vw, 48px)",
         }}
       >
@@ -48,14 +48,14 @@ const About: FC = () => {
         <div>
           <p
             style={{
-              color: "#8892B0",
+              color: "var(--color-text-dim)",
               lineHeight: 1.85,
               marginBottom: 20,
               fontSize: "clamp(14px, 3.5vw, 15px)",
             }}
           >
             I&apos;m a backend-focused engineer who genuinely enjoys understanding{" "}
-            <em style={{ color: "#CCD6F6", fontStyle: "italic" }}>
+            <em style={{ color: "var(--color-text)", fontStyle: "italic" }}>
               how systems work
             </em>{" "}
             — not just building features, but owning the architecture, security,
@@ -66,18 +66,18 @@ const About: FC = () => {
           </p>
           <p
             style={{
-              color: "#8892B0",
+              color: "var(--color-text-dim)",
               lineHeight: 1.85,
               marginBottom: 20,
               fontSize: "clamp(14px, 3.5vw, 15px)",
             }}
           >
             I work with{" "}
-            <span style={{ color: "#64FFDA", fontWeight: 500 }}>
+            <span style={{ color: "var(--color-accent)", fontWeight: 500 }}>
               FastAPI, SQLAlchemy, and PostgreSQL
             </span>{" "}
             on the backend, and{" "}
-            <span style={{ color: "#64FFDA", fontWeight: 500 }}>
+            <span style={{ color: "var(--color-accent)", fontWeight: 500 }}>
               Next.js and TypeScript
             </span>{" "}
             on the frontend — with growing expertise in orchestrating AI coding
@@ -86,7 +86,7 @@ const About: FC = () => {
           </p>
           <p
             style={{
-              color: "#8892B0",
+              color: "var(--color-text-dim)",
               lineHeight: 1.85,
               fontSize: "clamp(14px, 3.5vw, 15px)",
             }}
@@ -114,24 +114,24 @@ const About: FC = () => {
                 flexDirection: "row",
                 gap: 16,
                 padding: "clamp(10px, 2vw, 12px) clamp(12px, 3vw, 16px)",
-                background: "#0D1526",
-                border: "1px solid #1E2A45",
+                background: "var(--color-surface)",
+                border: "1px solid var(--color-border)",
                 borderRadius: "4px",
                 transition: "border-color 0.2s ease, transform 0.2s ease",
                 flexWrap: "wrap",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#64FFDA";
+                e.currentTarget.style.borderColor = "var(--color-accent)";
                 e.currentTarget.style.transform = "translateX(4px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#1E2A45";
+                e.currentTarget.style.borderColor = "var(--color-border)";
                 e.currentTarget.style.transform = "translateX(0)";
               }}
             >
               <span
                 style={{
-                  color: "#64FFDA",
+                  color: "var(--color-accent)",
                   minWidth: "clamp(80px, 15vw, 90px)",
                   fontWeight: 500,
                 }}
@@ -140,7 +140,7 @@ const About: FC = () => {
               </span>
               <span
                 style={{
-                  color: "#8892B0",
+                  color: "var(--color-text-dim)",
                   wordBreak: "break-word",
                   flex: 1,
                 }}
@@ -151,15 +151,15 @@ const About: FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      color: "#8892B0",
+                      color: "var(--color-text-dim)",
                       textDecoration: "none",
                       transition: "color 0.2s ease",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "#64FFDA";
+                      e.currentTarget.style.color = "var(--color-accent)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "#8892B0";
+                      e.currentTarget.style.color = "var(--color-text-dim)";
                     }}
                   >
                     {item.value} ↗
@@ -168,15 +168,15 @@ const About: FC = () => {
                   <a
                     href={`mailto:${item.value}`}
                     style={{
-                      color: "#8892B0",
+                      color: "var(--color-text-dim)",
                       textDecoration: "none",
                       transition: "color 0.2s ease",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "#64FFDA";
+                      e.currentTarget.style.color = "var(--color-accent)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "#8892B0";
+                      e.currentTarget.style.color = "var(--color-text-dim)";
                     }}
                   >
                     {item.value}
@@ -202,9 +202,9 @@ const About: FC = () => {
           style={{
             width: "clamp(40px, 10vw, 60px)",
             height: "2px",
-            background: "linear-gradient(90deg, #64FFDA, transparent)",
+            background: "linear-gradient(90deg, var(--color-accent), transparent)",
           }}
-        />
+          />
       </div>
     </section>
   );
