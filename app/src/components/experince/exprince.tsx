@@ -15,7 +15,17 @@ const experiences = [
       "Architected and delivered a fault-tolerant, production-grade price enrichment engine — spanning resilient multi-source ingestion, fallback strategies, data validation, stale-value protection, and scheduled processing — powering reliable, normalized market and commodity pricing across the Iranoban platform.",
       "Architected and delivered a security-critical, multi-tenant organizational calendar platform — enforcing strict data isolation, role-based access control, scoped rate limiting, persistent IP blocking, and comprehensive security validation — ensuring secure separation of data and operations across organizations at scale."
     ],
-  },
+  },{
+    id: "Freelancing Programmer",
+    date: "2025 - Present",
+    position: "Full-stack Developer",
+    company: "Freelancer",
+    companyUrl: "#",
+    description: [
+      "Delivered responsive websites for 10+ small businesses with FastAPI, PostgerSQL, Next.js",
+      "redesigned 13+ pages of a freelance marketplace platform with its productmanager, working directly with clients from requirements gathering to delivery."
+    ]
+  }
 ];
 
 export default function Experience() {
